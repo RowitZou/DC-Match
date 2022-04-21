@@ -1,0 +1,8 @@
+*.pyc
+*.log
+*.json
+*.arrow
+*.txt
+*.pt
+*.bin
+*.pth
