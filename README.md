@@ -34,28 +34,25 @@ All the processed datastes used in our work are available at [Google Drive](http
       |--- qqp
 	```
 
-* We have tried various pre-trained models. The following models works fine with our code:
+* We have tried various pre-trained models. The following models work fine with our code:
 
-    ```python
-    model_names_english_for_qqp_mrpc = [
-        'roberta-base',
-        'roberta-large',
-        'bert-base-uncased',
-        'bert-large-uncased',
-        'albert-base-v2',
-        'albert-large-v2',
-        'microsoft/deberta-large',
-        'microsoft/deberta-base',
-        'funnel-transformer/medium'
-    ]
+    * model names for QQP and MRPC:
+        - roberta-base
+        - roberta-large
+        - bert-base-uncased
+        - bert-large-uncased
+        - albert-base-v2
+        - albert-large-v2
+        - microsoft/deberta-large
+        - microsoft/deberta-base
+        - funnel-transformer/medium
 
-    model_names_chinese_for_medical = [
-        'hfl/chinese-macbert-base',
-        'hfl/chinese-macbert-large',
-        'hfl/chinese-roberta-wwm-ext',
-        'hfl/chinese-roberta-wwm-ext-large'
-    ]
-    ```
+    * model names for Medical:
+        - hfl/chinese-macbert-base
+        - hfl/chinese-macbert-large
+        - hfl/chinese-roberta-wwm-ext
+        - hfl/chinese-roberta-wwm-ext-large
+
 * Pre-process datasets.
 
     ```
@@ -71,7 +68,7 @@ All the processed datastes used in our work are available at [Google Drive](http
 * Training and Evaluation (Baseline)
 
     * MRPC
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -baseline \
         -task mrpc \
@@ -84,7 +81,7 @@ All the processed datastes used in our work are available at [Google Drive](http
     ```
 
     * QQP
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -baseline \
         -task qqp \
@@ -97,7 +94,7 @@ All the processed datastes used in our work are available at [Google Drive](http
     ```
 
     * Medical
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -baseline \
         -task medical \
@@ -112,7 +109,7 @@ All the processed datastes used in our work are available at [Google Drive](http
 * Training and Evaluation (DC-Match)
 
     * MRPC
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -task mrpc \
         -model roberta-large \
@@ -124,7 +121,7 @@ All the processed datastes used in our work are available at [Google Drive](http
     ```
 
     * QQP
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -task qqp \
         -model roberta-large \
@@ -136,7 +133,7 @@ All the processed datastes used in our work are available at [Google Drive](http
     ```
 
     * Medical
-    ```python
+    ```
     PYTHONPATH=. python -u src/main.py \
         -task medical \
         -model hfl/chinese-roberta-wwm-ext-large \
