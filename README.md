@@ -1,4 +1,4 @@
-# DAMS
+# DC-Match
 
 Pytorch implementation of the ACL-2022 (findings) paper: [Divide and Conquer: Text Semantic Matching with Disentangled Keywords and Intents](https://arxiv.org/abs/2203.02898).
 
